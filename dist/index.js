@@ -57,6 +57,9 @@ function obtenerPreguntaAleatoria() {
         opciones: opciones
     };
 }
+app.get('/', (req, res) => {
+    res.send('API de Preguntados funcionando!');
+});
 app.get('/api/pregunta', (req, res) => {
     const pregunta = obtenerPreguntaAleatoria();
     res.json(pregunta);
