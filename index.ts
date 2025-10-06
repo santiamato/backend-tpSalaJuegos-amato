@@ -5,7 +5,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/public', express.static(path.join(process.cwd(), 'server/public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
 
 interface Pregunta {
   pregunta: string;
