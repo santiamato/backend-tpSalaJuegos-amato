@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
-    "build": "npx tsc && mkdir -p dist/public && cp -r server/public/* dist/public/",
+    "build": "node_modules/.bin/tsc && mkdir -p dist/public && cp -r server/public/* dist/public/",
     "start": "node dist/index.js",
     "dev": "ts-node index.ts"
-}
-
-,
+},
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0"
