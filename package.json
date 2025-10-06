@@ -5,11 +5,10 @@
   "main": "index.ts",
   "scripts": {
     "prebuild": "npm install typescript --no-save",
-    "build": "tsc",
+    "build": "tsc && xcopy server\\public dist\\public /E /I /Y",
     "start": "node dist/index.js",
-    "dev": "ts-node index.ts"
-}
-,
+    "dev": "ts-node server/index.ts"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0"
