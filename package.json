@@ -4,10 +4,11 @@
   "description": "API de Preguntados en TypeScript",
   "main": "index.ts",
   "scripts": {
-    "build": "tsc && xcopy public dist\\public /E /I /Y",
+    "build": "tsc && xcopy server\\public dist\\public /E /I /Y",
     "start": "node dist/index.js",
     "dev": "ts-node index.ts"
-},
+}
+,
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0"
