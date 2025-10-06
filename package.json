@@ -4,10 +4,12 @@
   "description": "API de Preguntados en TypeScript",
   "main": "index.ts",
   "scripts": {
+    "prebuild": "npm install typescript --no-save",
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "ts-node index.ts"
-},
+}
+,
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0"
