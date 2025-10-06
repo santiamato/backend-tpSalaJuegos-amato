@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "prebuild": "npm install typescript --no-save",
-    "build": "tsc && xcopy server\\public dist\\public /E /I /Y",
+    "build": "tsc && cp -r server/public dist/public",
     "start": "node dist/index.js",
     "dev": "ts-node server/index.ts"
   },
