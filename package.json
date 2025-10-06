@@ -4,8 +4,9 @@
   "description": "API de Preguntados en TypeScript",
   "main": "index.ts",
   "scripts": {
-    "start": "ts-node index.ts",
-    "dev": "nodemon index.ts"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node index.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
