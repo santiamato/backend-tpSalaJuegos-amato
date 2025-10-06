@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, '../public')));
 
 interface Pregunta {
   pregunta: string;
@@ -69,6 +69,9 @@ function obtenerPreguntaAleatoria() {
     opciones: opciones
   };
 }
+app.get('/', (req, res) => {
+  res.send('API de Preguntados funcionando!');
+});
 
 app.get('/api/pregunta', (req, res) => {
   const pregunta = obtenerPreguntaAleatoria();
