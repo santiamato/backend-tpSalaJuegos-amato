@@ -1,11 +1,14 @@
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
+
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/public', express.static(path.join(__dirname, '../server/public')));
+// Servir la carpeta public desde dist/public en producción
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
 
 
 interface Pregunta {

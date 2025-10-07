@@ -4,7 +4,7 @@
   "description": "API de Preguntados en TypeScript",
   "main": "index.ts",
   "scripts": {
-    "build": "npx tsc && mkdir -p dist/public && npx cpx server/public/**/* dist/public",
+    "build": "npx tsc && npx cpx \"public/**/*\" dist/public",
     "start": "node dist/index.js",
     "dev": "npx ts-node index.ts"
   },
